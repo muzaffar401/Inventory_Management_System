@@ -1,7 +1,7 @@
 
 # Inventory Management System
 
-![Dashboard Screenshot](image.png) *Example dashboard UI*
+![Dashboard Screenshot](image.png) 
 
 A Python-based Inventory Management System using Object-Oriented Programming (OOP) principles to manage different product types (Electronics, Groceries, Clothing) with a modern graphical user interface.
 
@@ -50,86 +50,6 @@ The system follows SOLID principles with:
 - **Factory Pattern** - Creating products from dictionaries
 - **Strategy Pattern** - Different behaviors for product types
 - **Singleton Pattern** - Single Inventory instance
-
-## Class Structure
-
-### Core Classes
-
-```mermaid
-classDiagram
-    class InventoryError{
-        <<Exception>>
-        +__init__(message)
-    }
-    
-    class Product{
-        <<ABC>>
-        #_product_id: str
-        #_name: str
-        #_price: float
-        #_quantity_in_stock: int
-        +product_id() str
-        +name() str
-        +price() float
-        +price(new_price)
-        +quantity_in_stock() int
-        +restock(amount)
-        +sell(quantity)
-        +get_total_value() float
-        +__str__() str
-        +to_dict() dict
-        +from_dict(data) Product
-    }
-    
-    class Electronics{
-        -_warranty_years: int
-        -_brand: str
-        +warranty_years() int
-        +brand() str
-        +__str__() str
-        +to_dict() dict
-        +from_dict(data) Electronics
-    }
-    
-    class Grocery{
-        -_expiry_date: date
-        +expiry_date() date
-        +is_expired() bool
-        +__str__() str
-        +to_dict() dict
-        +from_dict(data) Grocery
-    }
-    
-    class Clothing{
-        -_size: str
-        -_material: str
-        +size() str
-        +material() str
-        +__str__() str
-        +to_dict() dict
-        +from_dict(data) Clothing
-    }
-    
-    class Inventory{
-        -_products: dict[str, Product]
-        +add_product(product)
-        +remove_product(product_id)
-        +search_by_name(name) list[Product]
-        +search_by_type(product_type) list[Product]
-        +list_all_products() list[Product]
-        +sell_product(product_id, quantity)
-        +restock_product(product_id, quantity)
-        +total_inventory_value() float
-        +remove_expired_products() int
-        +save_to_file(filename)
-        +load_from_file(filename)
-    }
-    
-    Product <|-- Electronics
-    Product <|-- Grocery
-    Product <|-- Clothing
-    Inventory "1" *-- "*" Product
-```
 
 ### Class Responsibilities
 
@@ -197,16 +117,11 @@ flowchart TD
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/inventory-system.git
-   cd inventory-system
+   git clone https://github.com/muzaffar401/Inventory_Management_System.git
+   cd Inventory_Management_System
    ```
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run the application:
+2. Run the application:
    ```bash
    python main.py
    ```
@@ -231,19 +146,6 @@ flowchart TD
 4. **Data Persistence**:
    - Save inventory to JSON file
    - Load previously saved inventory
-
-## File Structure
-
-```
-inventory-system/
-├── main.py                # Application entry point
-├── inventory.py           # Core OOP classes
-├── requirements.txt       # Dependencies
-├── README.md              # This documentation
-└── samples/
-    ├── inventory.json     # Sample inventory data
-    └── screenshot.png    # Application screenshot
-```
 
 ## License
 
