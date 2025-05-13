@@ -5,8 +5,6 @@ import json
 import abc
 from typing import Dict, List, Type
 
-# Keep all your original OOP classes (Product, Electronics, Grocery, Clothing, Inventory) here
-# ... [All your existing OOP classes remain unchanged] ...
 # Custom Exceptions
 class InventoryError(Exception):
     """Base exception for inventory-related errors"""
