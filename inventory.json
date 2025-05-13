@@ -1,0 +1,19 @@
+[
+  {
+    "type": "electronics",
+    "product_id": "1",
+    "name": "mobiles",
+    "price": 25000.0,
+    "quantity_in_stock": 9,
+    "warranty_years": 1,
+    "brand": "samsung"
+  },
+  {
+    "type": "grocery",
+    "product_id": "2",
+    "name": "apple",
+    "price": 100.0,
+    "quantity_in_stock": 1000,
+    "expiry_date": "2025-05-14"
+  }
+]
